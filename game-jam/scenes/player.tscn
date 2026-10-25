@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://sfojnhakeld5"]
+
+[ext_resource type="Script" uid="uid://b031wtx0ospd3" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://d0fc3ift88gvv" path="res://sprites/personaje1.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://c2t0crev4m7c8" path="res://sprites/personaje3.png" id="4_tuyoq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmfkl"]
+size = Vector2(71, 82.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tsy18"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}],
+"loop": 1,
+"name": &"caminar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g2els")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1189795264 groups=["jugador"]]
+script = ExtResource("1_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1857793049]
+position = Vector2(-3.5, 1.25)
+shape = SubResource("RectangleShape2D_fmfkl")
+debug_color = Color(0.9609683, 0, 0.5157674, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1682137847]
+texture_filter = 1
+scale = Vector2(1.25, 1.3125)
+sprite_frames = SubResource("SpriteFrames_tsy18")
+animation = &"caminar"
+frame_progress = 0.41697544

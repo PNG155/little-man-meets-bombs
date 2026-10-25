@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cgcyeiph7bvyl"]
+
+[ext_resource type="PackedScene" uid="uid://sfojnhakeld5" path="res://scenes/player.tscn" id="1_aa26p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xv4s"]
+size = Vector2(1298, 154)
+
+[node name="Node2D" type="Node2D" unique_id=2031805014]
+position = Vector2(576, 320)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=338622646]
+zoom = Vector2(0.91, 0.91)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1933579414]
+position = Vector2(-624, 312)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=913342279]
+position = Vector2(641, 76)
+shape = SubResource("RectangleShape2D_1xv4s")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=904488878]
+position = Vector2(-512, -448)
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=779396496]
+position = Vector2(-256, -448)
+
+[node name="Node2D3" type="Node2D" parent="." unique_id=2066744001]
+position = Vector2(0, -448)
+
+[node name="Node2D4" type="Node2D" parent="." unique_id=1475848591]
+position = Vector2(256, -448)
+
+[node name="Node2D5" type="Node2D" parent="." unique_id=1759110342]
+position = Vector2(512, -448)
+
+[node name="CharacterBody2D" parent="." unique_id=1189795264 instance=ExtResource("1_aa26p")]
+position = Vector2(0, 128)
